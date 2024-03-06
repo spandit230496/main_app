@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Period Tracker</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    {% include "navigation.html" %}
+
+    <div class="container p-20">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Track Your Period with Ease</h1>
+                <p>Stay on top of your menstrual cycle by using our period tracker. Keep a record of your periods, track symptoms, and stay healthy.</p>
+                <blockquote class="blockquote">
+                    <p class="mb-0" id="quote">Loading...</p>
+                    <footer class="blockquote-footer">Anonymous</footer>
+                </blockquote>
+            </div>
+            <div class="col-md-6">
+                <img src="https://source.unsplash.com/featured/?periods" alt="Periods" class="img-fluid" height="300" width="300">
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        // Array of random quotes about periods
+        const quotes = [
+            "Periods are a natural part of life.",
+            "Your period is a reminder of your strength.",
+            "Embrace your period, embrace yourself.",
+            "Your period is not a curse, it's a blessing."
+        ];
+
+        // Function to display a random quote
+        function displayRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const quoteElement = document.getElementById('quote');
+            quoteElement.textContent = quotes[randomIndex];
+        }
+
+        // Call the function to display a random quote when the page loads
+        displayRandomQuote();
+    </script>
+</body>
+</html>
